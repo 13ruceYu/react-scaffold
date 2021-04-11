@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class Test extends Component {
+export default class TodoList extends Component {
   render() {
     return (
       <div>
-        
+        TodoList
       </div>
     )
   }
