@@ -1,0 +1,14 @@
+.todo-item {
+  height: 36px;
+  line-height: 36px;
+  border-bottom: 1px solid #bbb;
+  padding-left: 10px;
+}
+
+.todo-item:last-child {
+  border-bottom: 0;
+}
+
+.todo-item>* {
+  vertical-align: middle;
+}
