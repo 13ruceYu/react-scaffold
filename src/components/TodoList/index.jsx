@@ -3,12 +3,16 @@ import TodoItem from '../TodoItem'
 import './index.css'
 
 export default class TodoList extends Component {
-  render() {
+  render () {
+    const { todos, updateTodo } = this.props
     return (
-      <div className='todo-list'>
-        <TodoItem></TodoItem>
-        <TodoItem></TodoItem>
-      </div>
+      <ul className='todo-list'>
+        {
+          todos.map((todo) => {
+            return <TodoItem todo={todo} key={todo.id} updateTodo={updateTodo} />
+          })
+        }
+      </ul>
     )
   }
 }
