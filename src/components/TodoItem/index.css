@@ -1,14 +1,32 @@
 .todo-item {
   height: 36px;
   line-height: 36px;
-  border-bottom: 1px solid #bbb;
-  padding-left: 10px;
+  border-bottom: 1px solid #cdcdcd;
+  padding: 0 10px;
+  width: 100%;
 }
 
 .todo-item:last-child {
   border-bottom: 0;
 }
 
-.todo-item>* {
+.todo-item > * {
   vertical-align: middle;
+}
+
+.todo-item_title {
+  margin-left: 8px;
+}
+
+.btn.btn-danger {
+  outline: none;
+  float: right;
+  background-color: tomato;
+  color: #fff;
+  border: none;
+  height: 26px;
+  line-height: 26px;
+  margin-top: 5px;
+  padding: 0 12px;
+  border-radius: 2px;
 }

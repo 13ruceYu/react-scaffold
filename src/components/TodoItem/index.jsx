@@ -2,12 +2,31 @@ import React, { Component } from 'react'
 import './index.css'
 
 export default class TodoItem extends Component {
-  render() {
+  state = {
+    mouseEnter: false
+  }
+
+  onMouseEnter = (flag) => {
+    return () => {
+      this.setState({ mouseEnter: flag })
+    }
+  }
+
+  onCheckChange = (id) => {
+    return (e) => {
+      this.props.updateTodo(id, e.target.checked)
+    }
+  }
+
+  render () {
+    const { todo } = this.props
+    const { mouseEnter } = this.state
     return (
-      <div className="todo-item">
-        <input type="checkbox"/>
-        <span className="todo-item_title">学习</span>
-      </div>
+      <li style={{ backgroundColor: mouseEnter ? '#f1f1f1' : 'white' }} className="todo-item" onMouseEnter={this.onMouseEnter(true)} onMouseLeave={this.onMouseEnter(false)}>
+        <input type="checkbox" defaultChecked={todo.done} onChange={this.onCheckChange(todo.id)} />
+        <span className="todo-item_title">{todo.title}</span>
+        <button className="btn btn-danger" style={{ display: mouseEnter ? 'block' : 'none' }}>删除</button>
+      </li>
     )
   }
 }
