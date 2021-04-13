@@ -45,14 +45,39 @@ class TodoApp extends Component {
     this.setState({ todos: newTodos })
   }
 
+  deleteTodo = (id) => {
+    const { todos } = this.state
+    const newTodos = todos.filter(todo =>
+      todo.id !== id
+    )
+    this.setState({ todos: newTodos })
+  }
+
+  updateAllDone = (flag) => {
+    const { todos } = this.state
+    const newTodos = todos.map(todo => {
+      todo.done = flag
+      return todo
+    })
+    this.setState({ todos: newTodos })
+  }
+
+  deleteAllDone = () => {
+    const { todos } = this.state
+    const newTodos = todos.filter(todo =>
+      todo.done === false
+    )
+    this.setState({ todos: newTodos })
+  }
+
 
   render () {
     const { todos } = this.state
     return (
       <div className="todo-app">
         <TodoHeader addTodo={this.addTodo}></TodoHeader>
-        <TodoList todos={todos} updateTodo={this.updateTodo}></TodoList>
-        <TodoFooter></TodoFooter>
+        <TodoList todos={todos} updateTodo={this.updateTodo} deleteTodo={this.deleteTodo}></TodoList>
+        <TodoFooter todos={todos} updateAllDone={this.updateAllDone} deleteAllDone={this.deleteAllDone}></TodoFooter>
       </div>
     );
   }

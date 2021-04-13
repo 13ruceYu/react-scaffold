@@ -1,0 +1,17 @@
+.todo-footer {
+  margin-top: 1em;
+}
+
+.todo-footer > * {
+  vertical-align: middle;
+}
+
+.todo-footer .info-count {
+  font-size: .8em;
+  margin-left: 6px;
+}
+
+.todo-footer .btn {
+  float: right;
+  margin-top: -5px;
+}

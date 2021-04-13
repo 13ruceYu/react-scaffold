@@ -16,4 +16,14 @@ ul {
 
 button:hover {
   cursor: pointer;
+  opacity: .9;
+}
+
+.btn.btn-danger {
+  outline: none;
+  background-color: tomato;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  padding: 6px;
 }

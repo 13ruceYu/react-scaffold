@@ -18,15 +18,10 @@
   margin-left: 8px;
 }
 
-.btn.btn-danger {
-  outline: none;
+.todo-item .btn.btn-danger {
   float: right;
-  background-color: tomato;
-  color: #fff;
-  border: none;
   height: 26px;
   line-height: 26px;
   margin-top: 5px;
   padding: 0 12px;
-  border-radius: 2px;
 }
