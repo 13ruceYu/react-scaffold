@@ -1,8 +1,15 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { nanoid } from 'nanoid'
 import './index.css'
 
 export default class TodoHeader extends Component {
+
+  // 对接收的 props 进行：类型 & 必要性的限制。
+  static propTypes = {
+    addTodo: PropTypes.func.isRequired
+  }
+
   handleKeyUp = (e) => {
     const { keyCode, target } = e
     let value = target.value

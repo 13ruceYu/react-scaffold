@@ -1,9 +1,16 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import './index.css'
 
 export default class TodoItem extends Component {
   state = {
     mouseEnter: false
+  }
+
+  static propTypes = {
+    updateTodo: PropTypes.func.isRequired,
+    deleteTodo: PropTypes.func.isRequired,
+    todo: PropTypes.object.isRequired
   }
 
   onMouseEnter = (flag) => {
@@ -12,15 +19,19 @@ export default class TodoItem extends Component {
     }
   }
 
+  // 点击 checkbox 事件
   onCheckChange = (id) => {
     return (e) => {
       this.props.updateTodo(id, e.target.checked)
     }
   }
 
+  // 删除 todo
   handleDeleteClick = (id) => {
     return (e) => {
-      this.props.deleteTodo(id)
+      if (window.confirm('确定删除吗？')) {
+        this.props.deleteTodo(id)
+      }
     }
   }
 
