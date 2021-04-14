@@ -25,7 +25,7 @@ class TodoApp extends Component {
     ]
   }
 
-  // 当子组件向父组件传值时，可通过父组件向组件传递一个事件实现
+  // 当子组件向父组件传值时，可通过父组件向组件传递一个函数实现
   addTodo = (todo) => {
     let newTodos = [...this.state.todos, todo]
     this.setState({
