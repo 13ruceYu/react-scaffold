@@ -1,0 +1,46 @@
+.header {
+  text-align: center;
+}
+
+.header .logo {
+  font-size: 36px;
+  font-weight: bold;
+  color: skyblue;
+  margin-bottom: 1rem;
+}
+
+.header .search-input {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.header .search-input input {
+  width: 100%;
+  height: 2.8rem;
+  outline: none;
+  border: 3px solid pink;
+  border-radius: 6px;
+  padding: 0 .5rem;
+  font-size: 1.2rem;
+  color: pink;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.header button {
+  position: absolute;
+  right: 0;
+  height: 2.8rem;
+  border: none;
+  background-color: transparent;
+  padding-right: 1rem;
+  color: skyblue;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+.header button:hover {
+  color: royalblue;
+}
