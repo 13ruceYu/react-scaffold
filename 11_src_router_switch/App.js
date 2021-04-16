@@ -19,8 +19,8 @@ export default class App extends Component {
               {/* React 中靠路由链接实现组建的切换 */}
               {/* NavLink 相较于普通的 Link，会自动给选中的 NavLink 的 className 添加一个 active 的默认值 */}
               {/* 如果想自己指定选中时添加的 className 值，可以使用 activeClassName 属性，如果设置属性，则默认 active 值将失效 */}
-              <MyNavLink to="/a/home">Home</MyNavLink>
-              <MyNavLink to="/a/about">About</MyNavLink>
+              <MyNavLink to="home">Home</MyNavLink>
+              <MyNavLink to="about">About</MyNavLink>
 
               {/* 原生 HTML 中靠 a 标签跳转不同的页面 */}
               {/* <a className="list-group-item" href="./about.html">About</a>
@@ -33,9 +33,9 @@ export default class App extends Component {
                 {/* 通过 switch 组件的包裹，可以让路由一但匹配到正确的组件就停止匹配 */}
                 <Switch>
                   {/* 注册路由 */}
-                  {/* 观察 css 文件的请求，发现丢失了 */}
-                  <Route path="/a/home" component={Home}></Route>
-                  <Route path="/a/about" component={About}></Route>
+                  <Route path="/home" component={Home}></Route>
+                  <Route path="/about" component={About}></Route>
+                  <Route path="/about" component={About}></Route>
                 </Switch>
               </div>
             </div>
