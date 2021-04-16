@@ -1,24 +1,25 @@
 // 注意！这个不是结构赋值，而是分别暴露。
 import React, { Component } from 'react'
-import { Link, Route } from 'react-router-dom'
-import Home from './components/Home'
-import About from './components/About'
+import { NavLink, Route } from 'react-router-dom'
+import Home from './pages/Home' // 路由组件
+import About from './pages/About' // 路由组件
+import Header from './components/Header' // 一般组件
 
 export default class App extends Component {
   render () {
     return (
       <div>
         <div className="row">
-          <div className="col-xs-offset-2 col-xs-8">
-            <div className="page-header"><h2>React Router Demo</h2></div>
-          </div>
+          <Header />
         </div>
         <div className="row">
           <div className="col-xs-2 col-xs-offset-2">
             <div className="list-group">
               {/* React 中靠路由链接实现组建的切换 */}
-              <Link className="list-group-item" to="home" >Home</Link>
-              <Link className="list-group-item" to="about">About</Link>
+              {/* NavLink 相较于普通的 Link，会自动给选中的 NavLink 的 className 添加一个 active 的默认值 */}
+              {/* 如果想自己指定选中时添加的 className 值，可以使用 activeClassName 属性，如果设置属性，则默认 active 值将失效 */}
+              <NavLink activeClassName="custom-active" className="list-group-item" to="home" >Home</NavLink>
+              <NavLink activeClassName="custom-active" className="list-group-item" to="about">About</NavLink>
 
               {/* 原生 HTML 中靠 a 标签跳转不同的页面 */}
               {/* <a className="list-group-item" href="./about.html">About</a>
