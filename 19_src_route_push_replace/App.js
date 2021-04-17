@@ -1,30 +1,20 @@
 // 注意！这个不是结构赋值，而是分别暴露。
 import React, { Component } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
-import { Button } from 'antd'
 import Home from './pages/Home' // 路由组件
 import About from './pages/About' // 路由组件
 import Header from './components/Header' // 一般组件
 import MyNavLink from './components/MyNavLink' // 封装后的 NavLink
-import { SearchOutlined } from '@ant-design/icons'
-import './app.css'
 
 export default class App extends Component {
   render () {
     return (
-      <div className="container">
-        <div className="row" style={{ margin: '20px 0px' }}>
+      <div>
+        <div className="row">
           <Header />
         </div>
-        <div className="antd-showcase" style={{ marginBottom: '20px' }}>
-          <Button>Ant Design React</Button>
-          <Button type="primary">Ant Design React</Button>
-          <Button type="primary" icon={<SearchOutlined />}>
-            Search
-          </Button>
-        </div>
-        <div className="row gx-5">
-          <div className="col-3">
+        <div className="row">
+          <div className="col-xs-2 col-xs-offset-2">
             <div className="list-group">
               {/* React 中靠路由链接实现组建的切换 */}
               {/* NavLink 相较于普通的 Link，会自动给选中的 NavLink 的 className 添加一个 active 的默认值 */}
@@ -37,7 +27,7 @@ export default class App extends Component {
               <a className="list-group-item active" href="./home.html">Home</a> */}
             </div>
           </div>
-          <div className="col-9">
+          <div className="col-xs-6">
             {/* 通过 switch 组件的包裹，可以让路由一但匹配到正确的组件就停止匹配 */}
             <Switch>
               {/* 注册路由 */}

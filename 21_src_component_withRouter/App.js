@@ -1,13 +1,10 @@
 // 注意！这个不是结构赋值，而是分别暴露。
 import React, { Component } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
-import { Button } from 'antd'
 import Home from './pages/Home' // 路由组件
 import About from './pages/About' // 路由组件
 import Header from './components/Header' // 一般组件
 import MyNavLink from './components/MyNavLink' // 封装后的 NavLink
-import { SearchOutlined } from '@ant-design/icons'
-import './app.css'
 
 export default class App extends Component {
   render () {
@@ -15,13 +12,6 @@ export default class App extends Component {
       <div className="container">
         <div className="row" style={{ margin: '20px 0px' }}>
           <Header />
-        </div>
-        <div className="antd-showcase" style={{ marginBottom: '20px' }}>
-          <Button>Ant Design React</Button>
-          <Button type="primary">Ant Design React</Button>
-          <Button type="primary" icon={<SearchOutlined />}>
-            Search
-          </Button>
         </div>
         <div className="row gx-5">
           <div className="col-3">
