@@ -4,7 +4,7 @@ export default class HomeMessage extends Component {
   render () {
     return (
       <div>
-        message page...
+        HomeMessage...
       </div>
     )
   }

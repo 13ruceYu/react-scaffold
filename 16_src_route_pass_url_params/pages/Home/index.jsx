@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, Redirect, Switch } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import MyNavLink from '../../components/MyNavLink'
 import HomeNews from './News';
 import HomeMessage from './Message'
@@ -21,11 +21,9 @@ export default class Home extends Component {
           </ul>
         </div>
         <div className="content-home" style={{ paddingTop: '24px' }}>
-          <Switch>
-            <Route path="/home/news" component={HomeNews}></Route>
-            <Route path="/home/message" component={HomeMessage}></Route>
-            <Redirect to="/home/news"></Redirect>
-          </Switch>
+          <Route path="/home/news" component={HomeNews}></Route>
+          <Route path="/home/message" component={HomeMessage}></Route>
+          <Redirect to="/home/news"></Redirect>
         </div>
       </div>
     )

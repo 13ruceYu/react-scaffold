@@ -5,9 +5,9 @@ import Detail from './Detail'
 export default class HomeNews extends Component {
   state = {
     newsList: [
-      { id: '1', title: 'news-1' },
-      { id: '2', title: 'news-2' },
-      { id: '3', title: 'news-3' },
+      { id: 1, title: 'news-1' },
+      { id: 2, title: 'news-2' },
+      { id: 3, title: 'news-3' },
     ]
   }
   render () {
@@ -22,9 +22,7 @@ export default class HomeNews extends Component {
                 {/* url params */}
                 {/* <Link to={`/home/news/detail/${news.id}/${news.title}`}>{news.title}</Link> */}
                 {/* search params */}
-                {/* <Link to={`/home/news/detail/?id=${news.id}&title=${news.title}`}>{news.title}</Link> */}
-                {/* state params */}
-                <Link to={{ pathname: '/home/news/detail', state: { id: news.id, title: news.title } }}>{news.title}</Link>
+                <Link to={`/home/news/detail/?id=${news.id}&title=${news.title}`}>{news.title}</Link>
               </li>
             )
           }
@@ -34,8 +32,6 @@ export default class HomeNews extends Component {
           {/* 注册路由，并声明接受 url params */}
           {/* <Route path="/home/news/detail/:id/:title" component={Detail}></Route> */}
           {/* 接受 search params，正常注册路由即可 */}
-          {/* <Route path="/home/news/detail" component={Detail}></Route> */}
-          {/* 接受 state params，正常注册路由即可 */}
           <Route path="/home/news/detail" component={Detail}></Route>
         </div>
       </div>
