@@ -4,7 +4,8 @@ import { Route, Switch, Redirect } from 'react-router-dom'
 import { Button } from 'antd'
 import Home from './pages/Home' // 路由组件
 import About from './pages/About' // 路由组件
-import ReduxCount from './pages/ReduxCount/ReduxCount'
+// import ReduxCount from './pages/ReduxCount/ReduxCount'
+import ReduxCount from './containers/Count'
 import Header from './components/Header' // 一般组件
 import MyNavLink from './components/MyNavLink' // 封装后的 NavLink
 import { SearchOutlined } from '@ant-design/icons'

@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import qs from 'querystring'
+// import qs from 'querystring'
 
-let obj = { name: 'tom', age: 18 } // name=tom&age=18 -> key=value&key=value -> 👻 urlEncoded 编码的字符串
-console.log(qs.stringify(obj))
+// let obj = { name: 'tom', age: 18 } // name=tom&age=18 -> key=value&key=value -> 👻 urlEncoded 编码的字符串
 
 const NewsDetailList = [
   { id: '1', content: 'hola china' },
